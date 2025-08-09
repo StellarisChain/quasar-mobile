@@ -1,0 +1,47 @@
+import { ExpoConfig, ConfigContext } from 'expo/config';
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+    ...config,
+    name: 'Quasar Mobile',
+    slug: 'quasar',
+    version: '0.0.1',
+    orientation: 'portrait',
+    icon: './assets/icon.png',
+    userInterfaceStyle: 'automatic',
+    splash: {
+        image: './assets/splash.png',
+        resizeMode: 'contain',
+        backgroundColor: '#1a1a1a'
+    },
+    assetBundlePatterns: [
+        '**/*'
+    ],
+    ios: {
+        supportsTablet: true,
+        bundleIdentifier: 'com.stellarischain.quasar',
+        infoPlist: {
+            ITSAppUsesNonExemptEncryption: false
+        }
+    },
+    android: {
+        adaptiveIcon: {
+            foregroundImage: './assets/adaptive-icon.png',
+            backgroundColor: '#1a1a1a'
+        },
+        package: 'com.stellarischain.quasar'
+    },
+    web: {
+        favicon: './assets/favicon.png'
+    },
+    scheme: 'quasar',
+    plugins: [
+        'expo-secure-store',
+        //'expo-crypto',
+        'expo-local-authentication'
+    ],
+    extra: {
+        eas: {
+            projectId: '15d7c6e7-7765-478c-a171-611a7289f57f'
+        }
+    }
+});
