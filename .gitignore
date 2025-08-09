@@ -1,0 +1,31 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+.pnpm-store
+
+# testing
+/coverage
+/temp
+
+# production
+/build
+
+# zip
+/zip
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.history
+
+# secrets
+secrets.*.js
+.env
+
+# testing
+/tests/.env
+/tests/test_wallets/
