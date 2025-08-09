@@ -1,4 +1,0 @@
-[submodule "quasar"]
-	path = quasar-extension
-	url = https://github.com/StellarisChain/quasar.git
-	branch = dev
